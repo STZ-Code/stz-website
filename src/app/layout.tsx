@@ -6,6 +6,16 @@ export const metadata: Metadata = {
 	title: 'STZCODE Web Template',
 }
 
+import clsx from 'clsx'
+import { Rethink_Sans } from 'next/font/google'
+
+export const rethinkSans = Rethink_Sans({
+	subsets: ['latin'],
+	weight: ['400', '500', '600', '700', '800'],
+	variable: '--font-sans',
+	display: 'swap',
+})
+
 export default function RootLayout({
 	children,
 }: Readonly<{
@@ -13,7 +23,12 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className="bg-zinc-800 h-screen text-zinc-100 flex">
+			<body
+				className={clsx(
+					rethinkSans.variable,
+					'flex bg-cover bg-no-repeat bg-center antialiased min-h-screen overflow-auto',
+				)}
+			>
 				{children}
 			</body>
 		</html>
