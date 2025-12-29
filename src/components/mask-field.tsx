@@ -25,7 +25,7 @@ export function MaskField<T extends FieldValues>({
 				type: 'text',
 				mask: config.mask as MaskProps,
 				maskProvider,
-				className: 'text-zinc-100',
+				inputStyles: 'text-zinc-100',
 			}}
 		/>
 	)
