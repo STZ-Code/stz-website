@@ -4,7 +4,7 @@ import stzLogo from '@/assets/images/stz-logo.png'
 
 export function Header() {
 	return (
-		<header className="w-full fixed opacity-80 h-fit px-4 top-6">
+		<header className="max-w-screen-2xl w-full fixed opacity-80 h-fit px-4 top-6">
 			<div className="bg-sky-50 w-full py-4 items-center flex justify-between rounded-3xl px-6">
 				<Image src={stzLogo} alt="STZCODE logo" width={200} height={34} />
 
