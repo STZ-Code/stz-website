@@ -11,16 +11,21 @@ const contactSchema = z.object({
 	email: z.email('Digite um e-mail válido'),
 	phone: z.string().optional(),
 	company: z.string().optional(),
+	services: z.array(z.string()),
 	description: z.string().optional(),
 })
 
 type ContactSchema = z.infer<typeof contactSchema>
 
 export function ContactForm() {
-	const { control } = useForm<ContactSchema>()
+	const { control, handleSubmit } = useForm<ContactSchema>()
+
+	const handleSendContactMessage = (data: ContactSchema) => {
+		console.log('MESSAGE DATA ==>', data)
+	}
 
 	return (
-		<form className="flex items-end flex-col h-full justify-between">
+		<form onSubmit={handleSubmit(handleSendContactMessage)} className="flex items-end flex-col h-full justify-between">
 			<div className="flex flex-col gap-4 w-full">
 				<div className="flex gap-4">
 					<FormField
@@ -79,6 +84,47 @@ export function ContactForm() {
 						}}
 					/>
 				</div>
+				<div className="flex">
+					<FormField
+						control={control}
+						config={{
+							name: 'services',
+							type: 'checkbox-group',
+							label: 'Escolha os serviços desejados',
+							variant: 'minimal',
+							options: [
+								{
+									label: 'Desenvolvimento Web',
+									name: 'web'
+								},
+								{
+									label: 'Desenvolvimento Desktop',
+									name: 'desktop'
+								},
+								{
+									label: 'API',
+									name: 'api'
+								},
+								{
+									label: 'Chatbot',
+									name: 'chatbot'
+								},
+								{
+									label: 'Desenvolvimento Aplicativo Mobile',
+									name: 'mobile'
+								},
+								{
+									label: 'Consultoria em Tecnologia',
+									name: 'consult-tech'
+								},
+								{
+									label: 'Outros',
+									name: 'others'
+								},
+							]
+						}}
+					/>
+				</div>
 				<div className="flex gap-4">
 					<FormField
 						control={control}
@@ -96,7 +142,7 @@ export function ContactForm() {
 			</div>
 
 			<button
-				type="button"
+				type="submit"
 				className="bg-slate-950 text-slate-100 font-medium w-fit py-3 px-4 rounded-lg flex gap-4 hover:bg-slate-700 transition-colors"
 			>
 				Enviar mensagem

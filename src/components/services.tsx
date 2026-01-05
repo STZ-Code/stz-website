@@ -165,7 +165,11 @@ export function Services() {
 				</div>
 
 				<div className="flex flex-1 bg-slate-500 rounded-md h-full">
-					<Image src={imageSrc[accordionOpen]} alt={'images'} />
+					<Image
+						src={imageSrc[accordionOpen]}
+						alt={'images'}
+						className="rounded-md"
+					/>
 				</div>
 			</div>
 		</div>

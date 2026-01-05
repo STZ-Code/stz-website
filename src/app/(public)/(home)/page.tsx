@@ -97,7 +97,7 @@ export default function HomePage() {
 					</div>
 
 					<div className="flex justify-evenly w-full gap-20 h-full">
-						<div className="bg-slate-500 rounded-md h-96 items-center flex-1 flex flex-col justify-end p-6 gap-4">
+						<div className="bg-slate-500 rounded-md max-w-sm h-96 items-center flex-1 flex flex-col justify-end p-6 gap-4">
 							<div className="flex flex-col w-full gap-2">
 								<h4 className="text-slate-50 font-semibold text-3xl">Greece</h4>
 								<p className="text-slate-200">
@@ -114,24 +114,7 @@ export default function HomePage() {
 								Conhecer
 							</button>
 						</div>
-						<div className="bg-slate-500 rounded-md h-96 items-center flex-1 flex flex-col justify-end p-6 gap-4">
-							<div className="flex flex-col w-full gap-2">
-								<h4 className="text-slate-50 font-semibold text-3xl">Greece</h4>
-								<p className="text-slate-200">
-									A plataforma completa para gestão de salões, barbearias e
-									estúdios de beleza. Agende, organize e faça seu negócio
-									crescer com tecnologia simples e inteligente.
-								</p>
-							</div>
-
-							<button
-								type="button"
-								className="text-slate-50 bg-sky-500 py-2 px-6 w-fit rounded-full font-semibold"
-							>
-								Conhecer
-							</button>
-						</div>
-						<div className="bg-slate-500 rounded-md h-96 items-center flex-1 flex flex-col justify-end p-6 gap-4">
+						<div className="bg-slate-500 rounded-md max-w-sm h-96 items-center flex-1 flex flex-col justify-end p-6 gap-4">
 							<div className="flex flex-col w-full gap-2">
 								<h4 className="text-slate-50 font-semibold text-3xl">Greece</h4>
 								<p className="text-slate-200">
