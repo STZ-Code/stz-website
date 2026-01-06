@@ -55,14 +55,18 @@ export function Services() {
 	>('item-1')
 
 	return (
-		<div className="min-h-screen px-12 mt-8 flex flex-col py-12 bg-[linear-gradient(180deg,rgba(226,232,240,0)_0%,#E2E8F0_8%,#E2E8F0_92%,rgba(226,232,240,0)_100%)]">
+		// biome-ignore lint/correctness/useUniqueElementIds: no need here
+		<div
+			id="servicos"
+			className="min-h-screen px-12 mt-8 flex flex-col py-12 bg-[linear-gradient(180deg,rgba(226,232,240,0)_0%,#E2E8F0_8%,#E2E8F0_92%,rgba(226,232,240,0)_100%)]"
+		>
 			<SectionTitle>Serviços</SectionTitle>
 
-			<h3 className="text-slate-900 font-medium text-6xl w-1/2 mt-2 mb-12">
+			<h3 className="text-slate-900 font-medium text-5xl md:text-6xl w-1/2 mt-2 mb-12">
 				Acelere sua Empresa através dos nossos Serviços
 			</h3>
 
-			<div className="flex gap-8 h-fit">
+			<div className="flex gap-8 flex-col md:flex-row h-fit">
 				<div className="flex-1">
 					<Accordion
 						type="single"

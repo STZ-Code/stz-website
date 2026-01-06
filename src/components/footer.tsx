@@ -13,8 +13,8 @@ import stzLogo from '@/assets/images/gray-logo.png'
 export function Footer() {
 	return (
 		<footer className="bg-slate-400">
-			<div className="p-12 flex justify-between">
-				<div className="w-1/4 gap-12 flex flex-col">
+			<div className="p-12 flex justify-between flex-col gap-6 md:flex-row md:gap-0">
+				<div className="w-full md:w-1/4 gap-12 flex flex-col">
 					<div className="flex flex-col gap-6">
 						<Image src={stzLogo} alt="STZCODE logo" width={200} height={34} />
 
@@ -44,23 +44,33 @@ export function Footer() {
 						</button>
 					</div>
 
-					<button
-						type="button"
+					<a
+						href="#inicio"
 						className="text-slate-50 text-sm border-2 border-slate-50 w-fit px-4 py-2 flex items-center gap-4"
 					>
 						<CaretDoubleUp size={24} />
 						Voltar ao topo
-					</button>
+					</a>
 				</div>
 				<div className="w-1/3 flex gap-32">
 					<nav>
 						<span className="text-slate-50 font-semibold">Navegação</span>
 						<ul className="flex flex-col gap-2 mt-4">
-							<li className="text-slate-100 text-sm">Início</li>
-							<li className="text-slate-100 text-sm">Quem somos</li>
-							<li className="text-slate-100 text-sm">Serviços</li>
-							<li className="text-slate-100 text-sm">Portfólio</li>
-							<li className="text-slate-100 text-sm">Contato</li>
+							<li className="text-slate-100 text-sm hover:text-sky-400 transition-colors">
+								<a href="#inicio">Início</a>
+							</li>
+							<li className="text-slate-100 text-sm hover:text-sky-400 transition-colors">
+								<a href="#quem-somos">Quem somos</a>
+							</li>
+							<li className="text-slate-100 text-sm hover:text-sky-400 transition-colors">
+								<a href="#servicos">Serviços</a>
+							</li>
+							<li className="text-slate-100 text-sm hover:text-sky-400 transition-colors">
+								<a href="#portfolio">Portfólio</a>
+							</li>
+							<li className="text-slate-100 text-sm hover:text-sky-400 transition-colors">
+								<a href="#contato">Contato</a>
+							</li>
 						</ul>
 					</nav>
 					<nav>

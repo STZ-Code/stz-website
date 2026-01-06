@@ -31,7 +31,7 @@ export function ContactForm() {
 			className="flex items-end flex-col h-full justify-between"
 		>
 			<div className="flex flex-col gap-4 w-full">
-				<div className="flex gap-4">
+				<div className="flex flex-col md:flex-row gap-4">
 					<FormField
 						control={control}
 						config={{
@@ -59,7 +59,7 @@ export function ContactForm() {
 						}}
 					/>
 				</div>
-				<div className="flex gap-4">
+				<div className="flex gap-4 flex-col md:flex-row">
 					<FormField
 						control={control}
 						config={{
@@ -96,6 +96,7 @@ export function ContactForm() {
 							type: 'checkbox-group',
 							label: 'Escolha os serviços desejados',
 							variant: 'minimal',
+							wrapperStyles: 'flex-col md:flex-row',
 							options: [
 								{
 									label: 'Desenvolvimento Web',
@@ -147,7 +148,7 @@ export function ContactForm() {
 
 			<button
 				type="submit"
-				className="bg-slate-950 text-slate-100 font-medium w-fit py-3 px-4 rounded-lg flex gap-4 hover:bg-slate-700 transition-colors"
+				className="bg-slate-950 mt-6 md:mt-0 text-slate-100 font-medium w-full md:w-fit justify-between md:justify-normal py-3 px-4 rounded-lg flex gap-4 hover:bg-slate-700 transition-colors"
 			>
 				Enviar mensagem
 				<ArrowRight size={24} />
