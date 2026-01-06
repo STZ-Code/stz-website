@@ -6,7 +6,7 @@ import { Rethink_Sans } from 'next/font/google'
 import background from '@/assets/images/background.png'
 
 export const metadata: Metadata = {
-	title: 'STZCODE Web Template',
+	title: 'STZCODE Wwebsite',
 }
 
 const rethinkSans = Rethink_Sans({

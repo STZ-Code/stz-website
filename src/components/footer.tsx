@@ -8,11 +8,16 @@ import {
 	MessengerLogo,
 	TwitterLogo,
 } from 'phosphor-react'
+import { STZLogo } from '@/assets/icons/logo'
 import stzLogo from '@/assets/images/gray-logo.png'
 
 export function Footer() {
 	return (
-		<footer className="bg-slate-400">
+		<footer className="bg-slate-400 relative overflow-hidden">
+			<STZLogo
+				className="absolute top-4 md:-right-24 md:top-0 rotate-12 opacity-40"
+				color="#CAD5E2"
+			/>
 			<div className="p-12 flex justify-between flex-col gap-6 md:flex-row md:gap-0">
 				<div className="w-full md:w-1/4 gap-12 flex flex-col">
 					<div className="flex flex-col gap-6">
@@ -86,10 +91,12 @@ export function Footer() {
 				</div>
 			</div>
 
-			<div className="bg-slate-600 flex items-center justify-center py-2">
-				<span className="font-semibold text-slate-50">
-					©2025 STZCODE® Todos os direitos reservados.
-				</span>
+			<div className="relative w-full h-10">
+				<div className="bg-slate-600 h-full items-center justify-center absolute bottom-0 w-full flex">
+					<span className="font-semibold text-slate-50">
+						©2025 STZCODE® Todos os direitos reservados.
+					</span>
+				</div>
 			</div>
 		</footer>
 	)
