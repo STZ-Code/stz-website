@@ -1,5 +1,3 @@
-'use client'
-
 import Image from 'next/image'
 import calendarToolsImg from '@/assets/images/calendar-tools.png'
 import contactImg from '@/assets/images/contact.png'

@@ -16,6 +16,8 @@
 		"@stz-code/utils": "1.2.5",
 		"class-variance-authority": "^0.7.1",
 		"clsx": "^2.1.1",
+		"date-fns": "^4.1.0",
+		"googleapis": "^169.0.0",
 		"lucide-react": "^0.562.0",
 		"next": "16.1.1",
 		"phosphor-react": "^1.4.1",

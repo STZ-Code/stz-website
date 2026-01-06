@@ -4,6 +4,8 @@ import { FormField } from '@stz-code/ui'
 import { ArrowRight } from 'phosphor-react'
 import { useForm } from 'react-hook-form'
 import z from 'zod'
+import { sendContactMessage } from '@/app/(public)/(home)/actions'
+import { useFormState } from '@/hooks/use-form-state'
 import { maskProvider } from '@/utils/mask'
 
 const contactSchema = z.object({
@@ -20,12 +22,14 @@ type ContactSchema = z.infer<typeof contactSchema>
 export function ContactForm() {
 	const { control, handleSubmit } = useForm<ContactSchema>()
 
-	const handleSendContactMessage = (data: ContactSchema) => {
-		console.log('MESSAGE DATA ==>', data)
-	}
+	const [formState, handleSendContact, isPending] =
+		useFormState(sendContactMessage)
 
 	return (
-		<form onSubmit={handleSubmit(handleSendContactMessage)} className="flex items-end flex-col h-full justify-between">
+		<form
+			onSubmit={handleSubmit(handleSendContact)}
+			className="flex items-end flex-col h-full justify-between"
+		>
 			<div className="flex flex-col gap-4 w-full">
 				<div className="flex gap-4">
 					<FormField
@@ -95,33 +99,33 @@ export function ContactForm() {
 							options: [
 								{
 									label: 'Desenvolvimento Web',
-									name: 'web'
+									name: 'web',
 								},
 								{
 									label: 'Desenvolvimento Desktop',
-									name: 'desktop'
+									name: 'desktop',
 								},
 								{
 									label: 'API',
-									name: 'api'
+									name: 'api',
 								},
 								{
 									label: 'Chatbot',
-									name: 'chatbot'
+									name: 'chatbot',
 								},
 								{
 									label: 'Desenvolvimento Aplicativo Mobile',
-									name: 'mobile'
+									name: 'mobile',
 								},
 								{
 									label: 'Consultoria em Tecnologia',
-									name: 'consult-tech'
+									name: 'consult-tech',
 								},
 								{
 									label: 'Outros',
-									name: 'others'
+									name: 'others',
 								},
-							]
+							],
 						}}
 					/>
 				</div>
