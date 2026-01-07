@@ -1,7 +1,9 @@
 'use client'
 
 import { FormField } from '@stz-code/ui'
-import { ArrowRight } from 'phosphor-react'
+import clsx from 'clsx'
+import { ArrowRight, CircleNotch } from 'phosphor-react'
+import { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import z from 'zod'
 import { sendContactMessage } from '@/app/(public)/(home)/actions'
@@ -20,10 +22,16 @@ const contactSchema = z.object({
 type ContactSchema = z.infer<typeof contactSchema>
 
 export function ContactForm() {
-	const { control, handleSubmit } = useForm<ContactSchema>()
+	const { control, handleSubmit, reset } = useForm<ContactSchema>()
 
 	const [formState, handleSendContact, isPending] =
 		useFormState(sendContactMessage)
+
+	useEffect(() => {
+		if (formState.success) {
+			reset()
+		}
+	}, [formState.success, reset])
 
 	return (
 		<form
@@ -148,10 +156,21 @@ export function ContactForm() {
 
 			<button
 				type="submit"
-				className="bg-slate-950 mt-6 md:mt-0 text-slate-100 font-medium w-full md:w-fit justify-between md:justify-normal py-3 px-4 rounded-lg flex gap-4 hover:bg-slate-700 transition-colors"
+				className={clsx(
+					'bg-slate-950 mt-6 md:mt-0 h-12 text-slate-100 font-medium w-full md:w-56 justify-center items-center px-4 rounded-lg flex gap-4 hover:bg-slate-700 transition-colors',
+					{
+						'opacity-80': isPending,
+					},
+				)}
 			>
-				Enviar mensagem
-				<ArrowRight size={24} />
+				{isPending ? (
+					<CircleNotch className="size-6 animate-spin" />
+				) : (
+					<>
+						Enviar mensagem
+						<ArrowRight size={24} />
+					</>
+				)}
 			</button>
 		</form>
 	)

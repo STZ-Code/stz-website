@@ -1,3 +1,5 @@
+import Image from 'next/image'
+import whatsappLogo from '@/assets/images/whatsapp-logo.png'
 import { ContactForm } from './contact-form'
 import { SectionTitle } from './section-title'
 
@@ -40,6 +42,25 @@ export function Contact() {
 								(87) 9 9636-3081
 							</p>
 						</div>
+
+						<a
+							href="https://wa.me/558796363081"
+							className="flex relative mt-6"
+							target="_blank"
+							rel="noopener"
+						>
+							<Image
+								src={whatsappLogo}
+								className="absolute -left-4 -top-1"
+								width={88}
+								alt="Sob medida"
+							/>
+							<div className="bg-cyan-950 hover:bg-cyan-800 transition-colors py-2 pr-6 pl-24 rounded-full">
+								<span className="text-slate-100 font-bold text-xl">
+									Fale direto pelo <br /> Whatsapp
+								</span>
+							</div>
+						</a>
 					</div>
 				</div>
 

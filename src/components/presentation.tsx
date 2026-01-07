@@ -26,7 +26,7 @@ export function Presentation() {
 
 					<a
 						href="#contato"
-						className="bg-slate-800 flex items-center justify-center text-slate-50 rounded-xl text-xl w-full py-4 md:w-fit md:px-12 md:py-6"
+						className="bg-slate-800 hover:bg-slate-700 transition-colors flex items-center justify-center text-slate-50 rounded-xl text-xl w-full py-4 md:w-fit md:px-12 md:py-6"
 					>
 						Quero minha solução
 					</a>

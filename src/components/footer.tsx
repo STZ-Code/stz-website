@@ -1,13 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import {
-	CaretDoubleUp,
-	InstagramLogo,
-	LinkedinLogo,
-	MessengerLogo,
-	TwitterLogo,
-} from 'phosphor-react'
+import { CaretDoubleUp, InstagramLogo, LinkedinLogo } from 'phosphor-react'
 import { STZLogo } from '@/assets/icons/logo'
 import stzLogo from '@/assets/images/gray-logo.png'
 
@@ -15,7 +9,7 @@ export function Footer() {
 	return (
 		<footer className="bg-slate-400 relative overflow-hidden">
 			<STZLogo
-				className="absolute top-4 md:-right-24 md:top-0 rotate-12 opacity-40"
+				className="absolute top-4 md:-right-24 md:top-0 rotate-12 z-10 opacity-40"
 				color="#CAD5E2"
 			/>
 			<div className="p-12 flex justify-between flex-col gap-6 md:flex-row md:gap-0">
@@ -31,34 +25,32 @@ export function Footer() {
 					</div>
 
 					<div className="flex gap-4">
-						<button type="button">
-							<TwitterLogo size={24} className="text-slate-50" />
-						</button>
-						<button type="button">
+						<a
+							href="https://www.instagram.com/stzcode"
+							target="_blank"
+							rel="noopener"
+						>
 							<InstagramLogo size={24} className="text-slate-50" />
-						</button>
-						<button type="button">
-							<MessengerLogo
-								weight="fill"
-								size={24}
-								className="text-slate-50"
-							/>
-						</button>
-						<button type="button">
+						</a>
+						<a
+							href="https://www.linkedin.com/company/stzcode/"
+							target="_blank"
+							rel="noopener"
+						>
 							<LinkedinLogo weight="fill" size={24} className="text-slate-50" />
-						</button>
+						</a>
 					</div>
 
 					<a
 						href="#inicio"
-						className="text-slate-50 text-sm border-2 border-slate-50 w-fit px-4 py-2 flex items-center gap-4"
+						className="text-slate-50 text-sm border-2 hover:bg-slate-100/20 transition-colors border-slate-50 w-fit px-4 py-2 flex items-center gap-4"
 					>
 						<CaretDoubleUp size={24} />
 						Voltar ao topo
 					</a>
 				</div>
 				<div className="w-1/3 flex gap-32">
-					<nav>
+					<nav className="z-50">
 						<span className="text-slate-50 font-semibold">Navegação</span>
 						<ul className="flex flex-col gap-2 mt-4">
 							<li className="text-slate-100 text-sm hover:text-sky-400 transition-colors">
@@ -78,7 +70,7 @@ export function Footer() {
 							</li>
 						</ul>
 					</nav>
-					<nav>
+					<nav className="z-50">
 						<span className="text-slate-50 font-semibold">Legal</span>
 						<ul className="flex flex-col gap-2 mt-4">
 							<li className="text-slate-100 text-sm">
@@ -92,7 +84,7 @@ export function Footer() {
 			</div>
 
 			<div className="relative w-full h-10">
-				<div className="bg-slate-600 h-full items-center justify-center absolute bottom-0 w-full flex">
+				<div className="bg-slate-600 h-full items-center justify-center absolute bottom-0 z-50 w-full flex">
 					<span className="font-semibold text-slate-50">
 						©2025 STZCODE® Todos os direitos reservados.
 					</span>

@@ -1,4 +1,4 @@
-import { type FormEvent, useState, useTransition } from 'react'
+import { useState, useTransition } from 'react'
 
 interface FormState {
 	success: boolean
@@ -43,28 +43,6 @@ export function useFormState(
 			}
 		})
 	}
-
-	// handleSubmit.withEvent = (event: FormEvent<HTMLFormElement>) => {
-	// 	event.preventDefault()
-	// 	const form = event.currentTarget
-	// 	const formData = new FormData(form)
-
-	// 	startTransition(async () => {
-	// 		try {
-	// 			const state = await action(formData)
-	// 			// .then((state) => {
-	// 			// 	setFormData(state)
-	// 			// })
-	// 			// .catch((error) => {
-	// 			// 	console.error('Form submission error:', error)
-	// 			// })
-
-	// 			setFormData(state)
-	// 		} catch (err) {
-	// 			console.error('Form submission error:', err)
-	// 		}
-	// 	})
-	// }
 
 	return [formState, handleSubmit, isPending] as const
 }

@@ -119,7 +119,7 @@ export function Services() {
 							<ServiceTitle icon={deviceIcon}>Aplicativos Mobile</ServiceTitle>
 							<AccordionContent className="flex flex-col gap-4 text-balance">
 								<p className="text-slate-700 text-lg">
-									Desenvolvemos aplicativos mobile intuitivos e mordenos,
+									Desenvolvemos aplicativos mobile intuitivos e modernos,
 									personalizados de acordo com sua demanda e seu objetivo.
 								</p>
 							</AccordionContent>
