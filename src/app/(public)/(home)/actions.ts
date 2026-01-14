@@ -10,7 +10,10 @@ const contactSchema = z.object({
 	email: z.email('Digite um e-mail válido'),
 	phone: z.string().optional(),
 	company: z.string().optional(),
-	services: z.array(z.string()),
+	services: z
+		.array(z.string())
+		.min(1, 'Selecione pelo menos um serviço')
+		.default([]),
 	description: z.string().optional(),
 })
 

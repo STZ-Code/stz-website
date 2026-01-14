@@ -1,3 +1,4 @@
+import { toast } from '@stz-code/ui'
 import { useState, useTransition } from 'react'
 
 interface FormState {
@@ -38,6 +39,12 @@ export function useFormState(
 				const state = await action(formData)
 
 				setFormData(state)
+
+				if (state.success) {
+					toast.success('Mensagem enviada com sucesso!', {
+						position: 'bottom-center',
+					})
+				}
 			} catch (err) {
 				console.error('Form submission error:', err)
 			}

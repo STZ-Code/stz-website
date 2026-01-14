@@ -3,10 +3,11 @@ import './globals.css'
 import clsx from 'clsx'
 import type { Metadata } from 'next'
 import { Rethink_Sans } from 'next/font/google'
+import { Toaster } from 'sonner'
 import background from '@/assets/images/background.png'
 
 export const metadata: Metadata = {
-	title: 'STZCODE Wwebsite',
+	title: 'STZCODE Website',
 }
 
 const rethinkSans = Rethink_Sans({
@@ -32,6 +33,7 @@ export default function RootLayout({
 					'flex bg-cover bg-no-repeat bg-center antialiased min-h-screen overflow-auto max-w-screen-2xl mx-auto',
 				)}
 			>
+				<Toaster richColors />
 				{children}
 			</body>
 		</html>

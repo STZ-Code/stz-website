@@ -16,8 +16,8 @@ importers:
         specifier: ^1.2.12
         version: 1.2.12(@types/react-dom@19.1.9(@types/react@19.1.12))(@types/react@19.1.12)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@stz-code/ui':
-        specifier: ^1.1.25
-        version: 1.1.25(@types/react-dom@19.1.9(@types/react@19.1.12))(@types/react@19.1.12)(clsx@2.1.1)(react-dom@19.0.0(react@19.0.0))(react-hook-form@7.62.0(react@19.0.0))(react@19.0.0)
+        specifier: ^1.2.27
+        version: 1.2.27(@types/react-dom@19.1.9(@types/react@19.1.12))(@types/react@19.1.12)(clsx@2.1.1)(react-dom@19.0.0(react@19.0.0))(react-hook-form@7.62.0(react@19.0.0))(react@19.0.0)
       '@stz-code/utils':
         specifier: 1.2.5
         version: 1.2.5
@@ -51,6 +51,9 @@ importers:
       react-hook-form:
         specifier: ^7.62.0
         version: 7.62.0(react@19.0.0)
+      sonner:
+        specifier: ^2.0.7
+        version: 2.0.7(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       tailwind-merge:
         specifier: ^3.4.0
         version: 3.4.0
@@ -1025,8 +1028,8 @@ packages:
   '@stz-code/tsconfig@0.0.7':
     resolution: {integrity: sha512-7Syh879NZEn1L3MWbSJ9hhznP7swRnZR4khWR/pxDmQKJ5rpMV0SGmNuAUChuIRJybcjYeRVh5WqcoZ9fbNDkg==, tarball: https://npm.pkg.github.com/download/@stz-code/tsconfig/0.0.7/6449622fab5497ecf7858c3c69a0ef4b8aa0e3c5}
 
-  '@stz-code/ui@1.1.25':
-    resolution: {integrity: sha512-Odd5XCK452/FLcWQ9wAeV1LFvpnL+yjnyv2QGgrhIHcvOHbWSJlB/v4TA0m8lHwLdm8uyVgW6E79/AZAb2t5ig==, tarball: https://npm.pkg.github.com/download/@stz-code/ui/1.1.25/372ab4fb061462e63a685ae2a1b0cb0f95e0a7be}
+  '@stz-code/ui@1.2.27':
+    resolution: {integrity: sha512-TUVZZef4d/KWDaYv0gsvmESs/FsWk5KYwVdycgB90yr7l/7jb3OfFFv6f5zWJROW7LVvlXRLg6uKK/bgN5FjJA==, tarball: https://npm.pkg.github.com/download/@stz-code/ui/1.2.27/6b010d5cc3f0725ee8ca20cd0b5be70d4d470f35}
     peerDependencies:
       clsx: ^2.1.1
       react: 19.0.0
@@ -1571,6 +1574,12 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
+  next-themes@0.4.6:
+    resolution: {integrity: sha512-pZvgD5L0IEvX5/9GWyHMf3m8BKiVQwsCMHfoFosXtXBMnaS0ZnIJ9ST4b4NqLVKDEm8QBxoNNGNaBv2JNF6XNA==}
+    peerDependencies:
+      react: 19.0.0
+      react-dom: 19.0.0
+
   next@16.1.1:
     resolution: {integrity: sha512-QI+T7xrxt1pF6SQ/JYFz95ro/mg/1Znk5vBebsWwbpejj1T0A23hO7GYEaVac9QUOT2BIMiuzm0L99ooq7k0/w==}
     engines: {node: '>=20.9.0'}
@@ -1862,6 +1871,12 @@ packages:
 
   sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
+
+  sonner@2.0.7:
+    resolution: {integrity: sha512-W6ZN4p58k8aDKA4XPcx2hpIQXBRAgyiWVkYhT7CvK6D3iAu7xjvVyhQHg2/iaKJZ1XVJ4r7XuwGL+WGEK37i9w==}
+    peerDependencies:
+      react: 19.0.0
+      react-dom: 19.0.0
 
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
@@ -2898,7 +2913,7 @@ snapshots:
 
   '@stz-code/tsconfig@0.0.7': {}
 
-  '@stz-code/ui@1.1.25(@types/react-dom@19.1.9(@types/react@19.1.12))(@types/react@19.1.12)(clsx@2.1.1)(react-dom@19.0.0(react@19.0.0))(react-hook-form@7.62.0(react@19.0.0))(react@19.0.0)':
+  '@stz-code/ui@1.2.27(@types/react-dom@19.1.9(@types/react@19.1.12))(@types/react@19.1.12)(clsx@2.1.1)(react-dom@19.0.0(react@19.0.0))(react-hook-form@7.62.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@headlessui/react': 2.2.7(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@phosphor-icons/react': 2.1.10(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -2908,11 +2923,13 @@ snapshots:
       clsx: 2.1.1
       lodash: 4.17.21
       lucide-react: 0.562.0(react@19.0.0)
+      next-themes: 0.4.6(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
       react-dropzone: 14.3.8(react@19.0.0)
       react-hook-form: 7.62.0(react@19.0.0)
       react-imask: 7.6.1(react@19.0.0)
+      sonner: 2.0.7(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       tailwind-merge: 3.4.0
       tw-animate-css: 1.4.0
     transitivePeerDependencies:
@@ -3469,6 +3486,11 @@ snapshots:
 
   nanoid@3.3.11: {}
 
+  next-themes@0.4.6(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
+    dependencies:
+      react: 19.0.0
+      react-dom: 19.0.0(react@19.0.0)
+
   next@16.1.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
     dependencies:
       '@next/env': 16.1.1
@@ -3789,6 +3811,11 @@ snapshots:
   signal-exit@4.1.0: {}
 
   sisteransi@1.0.5: {}
+
+  sonner@2.0.7(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
+    dependencies:
+      react: 19.0.0
+      react-dom: 19.0.0(react@19.0.0)
 
   source-map-js@1.2.1: {}
 

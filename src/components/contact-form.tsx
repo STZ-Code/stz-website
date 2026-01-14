@@ -15,14 +15,17 @@ const contactSchema = z.object({
 	email: z.email('Digite um e-mail válido'),
 	phone: z.string().optional(),
 	company: z.string().optional(),
-	services: z.array(z.string()),
+	services: z
+		.array(z.string())
+		.min(1, 'Selecione pelo menos um serviço')
+		.default([]),
 	description: z.string().optional(),
 })
 
 type ContactSchema = z.infer<typeof contactSchema>
 
 export function ContactForm() {
-	const { control, handleSubmit, reset } = useForm<ContactSchema>()
+	const { control, handleSubmit, reset, setError, formState: { isValid }, watch } = useForm<ContactSchema>()
 
 	const [formState, handleSendContact, isPending] =
 		useFormState(sendContactMessage)
@@ -31,8 +34,26 @@ export function ContactForm() {
 		if (formState.success) {
 			reset()
 		}
-	}, [formState.success, reset])
 
+		if (formState.errors) {
+			Object.entries(formState.errors).forEach(
+				([field, messages]) => {
+					if (!messages?.length) return
+
+					setError(field as keyof ContactSchema, {
+						type: 'server',
+						message: messages[0],
+					})
+				},
+			)
+		}
+	}, [formState, reset, setError])
+
+	const form = watch(['email', 'services', 'name', 'phone'])
+	
+	const formIsValid = !form[0] && !form[1] && !form[2]
+	
+	console.log('form', formIsValid)
 	return (
 		<form
 			onSubmit={handleSubmit(handleSendContact)}
@@ -162,6 +183,7 @@ export function ContactForm() {
 						'opacity-80': isPending,
 					},
 				)}
+				disabled={!isValid || isPending}
 			>
 				{isPending ? (
 					<CircleNotch className="size-6 animate-spin" />
