@@ -173,8 +173,7 @@ export function ContactForm() {
 							placeholder: 'Informe uma breve descrição sobre o seu projeto',
 							label: 'Descrição',
 							containerStyles: 'flex-1',
-							wrapperStyles:
-								'focus-within:ring-2 focus-within:ring-sky-500 focus-within:border-sky-500',
+							inputStyles: 'focus:ring-sky-500',
 						}}
 					/>
 				</div>
