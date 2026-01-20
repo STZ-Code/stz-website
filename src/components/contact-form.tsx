@@ -25,7 +25,14 @@ const contactSchema = z.object({
 type ContactSchema = z.infer<typeof contactSchema>
 
 export function ContactForm() {
-	const { control, handleSubmit, reset, setError, formState: { isValid }, watch } = useForm<ContactSchema>()
+	const {
+		control,
+		handleSubmit,
+		reset,
+		setError,
+		formState: { isValid },
+		watch,
+	} = useForm<ContactSchema>()
 
 	const [formState, handleSendContact, isPending] =
 		useFormState(sendContactMessage)
@@ -36,23 +43,21 @@ export function ContactForm() {
 		}
 
 		if (formState.errors) {
-			Object.entries(formState.errors).forEach(
-				([field, messages]) => {
-					if (!messages?.length) return
+			Object.entries(formState.errors).forEach(([field, messages]) => {
+				if (!messages?.length) return
 
-					setError(field as keyof ContactSchema, {
-						type: 'server',
-						message: messages[0],
-					})
-				},
-			)
+				setError(field as keyof ContactSchema, {
+					type: 'server',
+					message: messages[0],
+				})
+			})
 		}
 	}, [formState, reset, setError])
 
 	const form = watch(['email', 'services', 'name', 'phone'])
-	
+
 	const formIsValid = !form[0] && !form[1] && !form[2]
-	
+
 	console.log('form', formIsValid)
 	return (
 		<form
@@ -96,7 +101,7 @@ export function ContactForm() {
 							type: 'text',
 							mask: 'PHONE',
 							maskProvider,
-							placeholder: '(87) 9 9999-9999',
+							placeholder: '(99) 9 9999-9999',
 							label: 'Telefone',
 							containerStyles: 'flex-1',
 							wrapperStyles:

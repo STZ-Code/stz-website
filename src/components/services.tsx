@@ -31,8 +31,8 @@ type ServiceTitleProps = {
 
 const imageSrc = {
 	'item-1': webImage,
-	'item-2': mobileImage,
-	'item-3': desktopImage,
+	'item-2': desktopImage,
+	'item-3': mobileImage,
 	'item-4': apiImage,
 	'item-5': chatbotImage,
 	'item-6': techImage,
