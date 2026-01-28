@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { CaretDoubleUp, InstagramLogo, LinkedinLogo } from 'phosphor-react'
 import { STZLogo } from '@/assets/icons/logo'
 import stzLogo from '@/assets/images/gray-logo.png'
@@ -54,30 +55,35 @@ export function Footer() {
 						<span className="text-slate-50 font-semibold">Navegação</span>
 						<ul className="flex flex-col gap-2 mt-4">
 							<li className="text-slate-100 text-sm hover:text-sky-400 transition-colors">
-								<a href="#inicio">Início</a>
+								<Link href="/#inicio">Início</Link>
 							</li>
 							<li className="text-slate-100 text-sm hover:text-sky-400 transition-colors">
-								<a href="#quem-somos">Quem somos</a>
+								<Link href="/#quem-somos">Quem somos</Link>
 							</li>
 							<li className="text-slate-100 text-sm hover:text-sky-400 transition-colors">
-								<a href="#servicos">Serviços</a>
+								<Link href="/#servicos">Serviços</Link>
 							</li>
 							<li className="text-slate-100 text-sm hover:text-sky-400 transition-colors">
-								<a href="#portfolio">Portfólio</a>
+								<Link href="/#portfolio">Portfólio</Link>
 							</li>
 							<li className="text-slate-100 text-sm hover:text-sky-400 transition-colors">
-								<a href="#contato">Contato</a>
+								<Link href="/#contato">Contato</Link>
 							</li>
 						</ul>
 					</nav>
 					<nav className="z-50">
 						<span className="text-slate-50 font-semibold">Legal</span>
 						<ul className="flex flex-col gap-2 mt-4">
-							<li className="text-slate-100 text-sm">
-								Política de Privacidade
-							</li>
-							<li className="text-slate-100 text-sm">Termos de Serviço</li>
-							<li className="text-slate-100 text-sm">Cookies</li>
+							<Link href="/privacidade">
+								<li className="text-slate-100 text-sm hover:text-sky-400 transition-colors">
+									Política de Privacidade
+								</li>
+							</Link>
+							<Link href="/termos">
+								<li className="text-slate-100 text-sm hover:text-sky-400 transition-colors">
+									Termos de Serviço
+								</li>
+							</Link>
 						</ul>
 					</nav>
 				</div>

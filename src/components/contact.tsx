@@ -14,8 +14,9 @@ export function Contact() {
 
 			<div className="flex gap-6 mt-4 flex-col md:flex-row">
 				<div className="w-full md:w-1/2">
-					<h3 className="text-slate-900 font-medium text-5xl w-full md:w-1/2 mt-2 mb-12">
-						Entre em contato com a gente
+					<h3 className="text-slate-900 font-medium text-5xl mt-2 mb-12">
+						Entre em contato <br />
+						conosco
 					</h3>
 
 					<p className="text-slate-800 text-xl mb-14">
