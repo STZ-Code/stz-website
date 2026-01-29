@@ -1,6 +1,6 @@
 export default function Terms() {
 	return (
-		<main className="mx-auto max-w-4xl px-4 py-12 text-gray-800">
+		<main className="mx-auto max-w-4xl px-4 py-12 text-gray-800 pt-32">
 			<header className="mb-10">
 				<h1 className="mb-2 text-3xl font-bold text-gray-900">
 					Termos de Serviço – STZCODE

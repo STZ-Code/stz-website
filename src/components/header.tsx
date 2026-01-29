@@ -10,7 +10,7 @@ interface HeaderProps {
 
 export function Header({ variant = 'default' }: HeaderProps) {
 	return (
-		<header className="max-w-screen-2xl w-full fixed opacity-80 h-fit px-4 top-6 flex justify-center z-30">
+		<header className="max-w-screen-2xl w-full fixed opacity-80 h-fit px-4 top-6 flex justify-center">
 			<div className="bg-sky-50 w-full md:w-4/5 py-4 items-center flex justify-between rounded-3xl px-6">
 				<Link href="/#inicio">
 					<Image src={stzLogo} alt="STZCODE logo" width={200} height={34} />
